@@ -15,6 +15,7 @@
 		B35F87222A334A8400DD15D6 /* ObjectiveSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F87212A334A8400DD15D6 /* ObjectiveSceneTests.swift */; };
 		B35F872C2A334A8400DD15D6 /* ObjectiveSceneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F872B2A334A8400DD15D6 /* ObjectiveSceneUITests.swift */; };
 		B35F872E2A334A8400DD15D6 /* ObjectiveSceneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F872D2A334A8400DD15D6 /* ObjectiveSceneUITestsLaunchTests.swift */; };
+		B36FA2862A33A07C0042F9C1 /* SetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FA2852A33A07C0042F9C1 /* SetNames.swift */; };
 		B3F1A4532A33548400777C3F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1A4522A33548400777C3F /* WidgetKit.framework */; };
 		B3F1A4552A33548400777C3F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1A4542A33548400777C3F /* SwiftUI.framework */; };
 		B3F1A4582A33548400777C3F /* SceneWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1A4572A33548400777C3F /* SceneWidgetsBundle.swift */; };
@@ -78,6 +79,7 @@
 		B35F87272A334A8400DD15D6 /* ObjectiveSceneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveSceneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35F872B2A334A8400DD15D6 /* ObjectiveSceneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveSceneUITests.swift; sourceTree = "<group>"; };
 		B35F872D2A334A8400DD15D6 /* ObjectiveSceneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveSceneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B36FA2852A33A07C0042F9C1 /* SetNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNames.swift; sourceTree = "<group>"; };
 		B3F1A4502A33548400777C3F /* SceneWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SceneWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F1A4522A33548400777C3F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B3F1A4542A33548400777C3F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -158,6 +160,7 @@
 				B35F87182A334A8400DD15D6 /* Info.plist */,
 				B35F87122A334A8400DD15D6 /* Preview Content */,
 				B3F1A4692A33642700777C3F /* PiezView.swift */,
+				B36FA2852A33A07C0042F9C1 /* SetNames.swift */,
 			);
 			path = ObjectiveScene;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36FA2862A33A07C0042F9C1 /* SetNames.swift in Sources */,
 				B3F1A46A2A33642700777C3F /* PiezView.swift in Sources */,
 				B35F870F2A334A8300DD15D6 /* ContentView.swift in Sources */,
 				B35F87162A334A8400DD15D6 /* Item.swift in Sources */,
