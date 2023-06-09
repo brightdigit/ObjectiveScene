@@ -63,28 +63,8 @@ struct ContentView: View {
                           
                           if index < set.pies.count {
                             let pie = set.pies[index]
-                            GeometryReader { proxy in
-                              
-                              Chart {
-                                SectorMark(
-                                  angle:
-                                      .value("stuff", 1 - pie.value)
-                                  
-                                ).opacity(0.0)
-                                
-                                SectorMark(angle:
-                                    .value(pie.id.uuidString, pie.value),
-                                           innerRadius: MarkDimension(
-                                            floatLiteral:
-                                              (proxy.size.width / 2.0) / (3.0) * (3 - Double(index) - 1.0) + 5.0
-                                           ),
-                                           outerRadius: MarkDimension(
-                                            floatLiteral:
-                                              (proxy.size.width / 2.0) / (3.0) * (3 - Double(index))
-                                           )
-                                ).foregroundStyle(colors[index])
-                              }
-                            }.padding(8.0).frame(width: geometry.size.width / 3, height: geometry.size.width / 3, alignment: .center)
+                            PieView(pie: pie, index: index)
+                            .padding(8.0).frame(width: geometry.size.width / 3, height: geometry.size.width / 3, alignment: .center)
                             
                           }
                         }
