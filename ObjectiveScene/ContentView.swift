@@ -16,7 +16,7 @@ struct ScenePieSet : Identifiable {
   static func random (_ index : Int) -> ScenePieSet {
     ScenePieSet(pies:
                   (0...2).map({ index in
-        .init(value: Double(index + 1) * 1.0 / 3.0)
+        .init(value: .random(in: 0...1))
     })
     )
   }
@@ -32,9 +32,9 @@ struct ContentView: View {
     @Query private var items: [Item]
   private let sets : [ScenePieSet] = (0...20).map(ScenePieSet.random)
   let radii : [(MarkDimension, MarkDimension)] = [
-    (21.0, 30.0),
-    (12.0, 20.0),
-    (5.0, 10.0),
+    (33.0, 45.0),
+    (21.0, 32.0),
+    (10.0, 20.0),
   ]
   
   let colors : [Color] = [
@@ -44,47 +44,54 @@ struct ContentView: View {
   ]
   
     var body: some View {
-        NavigationView {
+        NavigationStack {
           VStack{
-            LazyVGrid(columns: [
-              GridItem(.adaptive(minimum: 120, maximum: 150))
-            ], content: {
-              ForEach(sets) { set in
-                ZStack{
-                  ForEach(0..<3) { index in
-                    
-                    if index < set.pies.count {
-                      let pie = set.pies[index]
-                      Chart {
-                        SectorMark(
-                          angle:
-                              .value("stuff", 1 - pie.value)
+            GeometryReader(content: { geometry in
+              LazyVGrid(columns: [
+                GridItem(.adaptive(
+                  minimum: geometry.size.width / 4,
+                  maximum: geometry.size.width / 2
+                )
+                )
+              ], content: {
+                ForEach(sets) { set in
+                  ZStack{
+                    ForEach(0..<3) { index in
+                      
+                      if index < set.pies.count {
+                        let pie = set.pies[index]
+                        GeometryReader { proxy in
                           
-                        ).opacity(0.0)
+                          Chart {
+                            SectorMark(
+                              angle:
+                                  .value("stuff", 1 - pie.value)
+                              
+                            ).opacity(0.0)
+                            
+                            SectorMark(angle:
+                                .value(pie.id.uuidString, pie.value),
+                                       innerRadius: MarkDimension(
+                                        floatLiteral:
+                                          (proxy.size.width / 2.0) / (3.0) * (3 - Double(index) - 1.0) + 5.0
+                                                                 ),
+                                       outerRadius: MarkDimension(
+                                        floatLiteral:
+                                          (proxy.size.width / 2.0) / (3.0) * (3 - Double(index))
+                                                                 )
+                            ).foregroundStyle(colors[index])
+                          }
+                        }.padding(8.0).frame(width: geometry.size.width / 3, height: geometry.size.width / 3, alignment: .center)
                         
-                        SectorMark(angle:
-                            .value(pie.id.uuidString, pie.value),
-                                   innerRadius: radii[index].0,
-                                   outerRadius: radii[index].1
-                        ).foregroundStyle(colors[index])
                       }
                     }
                   }
                 }
-              }
+              })
             })
+            
             Spacer()
           }
-//            List {
-//                ForEach(items) { item in
-//                    NavigationLink {
-//                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-//                    } label: {
-//                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-//                    }
-//                }
-//                .onDelete(perform: deleteItems)
-//            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
@@ -95,7 +102,6 @@ struct ContentView: View {
                     }
                 }
             }
-            Text("Select an item")
         }
     }
 
