@@ -9,28 +9,11 @@ import SwiftUI
 import SwiftData
 import Charts
 
-struct ScenePieSet : Identifiable {
-  let pies : [ScenePie]
-  let id = UUID()
-  let title : String
-  
-  static func random (_ index : Int) -> ScenePieSet {
-    ScenePieSet(pies:
-                  (0...2).map({ index in
-        .init(value: .random(in: 0...1))
-    }), title: setNames.randomElement()!
-    )
-  }
-}
-struct ScenePie : Identifiable {
-  let id = UUID()
-  let value : Double
-  
-}
+
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    //@Environment(\.modelContext) private var modelContext
+    //@Query private var items: [Item]
   private let sets : [ScenePieSet] = (0...20).map(ScenePieSet.random)
   let radii : [(MarkDimension, MarkDimension)] = [
     (33.0, 45.0),
@@ -82,7 +65,7 @@ struct ContentView: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
+                  Button(action: {}) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
@@ -90,23 +73,22 @@ struct ContentView: View {
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
+//    private func addItem() {
+//        withAnimation {
+//            let newItem = Item(timestamp: Date())
+//            modelContext.insert(newItem)
+//        }
+//    }
+//
+//    private func deleteItems(offsets: IndexSet) {
+//        withAnimation {
+//            for index in offsets {
+//                modelContext.delete(items[index])
+//            }
+//        }
+//    }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

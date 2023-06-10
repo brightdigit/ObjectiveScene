@@ -17,6 +17,8 @@
 		B35F872E2A334A8400DD15D6 /* ObjectiveSceneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F872D2A334A8400DD15D6 /* ObjectiveSceneUITestsLaunchTests.swift */; };
 		B36FA2862A33A07C0042F9C1 /* SetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FA2852A33A07C0042F9C1 /* SetNames.swift */; };
 		B36FA28C2A33ABBE0042F9C1 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FA28B2A33ABBE0042F9C1 /* PieView.swift */; };
+		B38435262A3400A10067C24F /* ScenePie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38435252A3400A10067C24F /* ScenePie.swift */; };
+		B384352A2A3404120067C24F /* PieSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38435292A3404120067C24F /* PieSetView.swift */; };
 		B3F1A4532A33548400777C3F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1A4522A33548400777C3F /* WidgetKit.framework */; };
 		B3F1A4552A33548400777C3F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1A4542A33548400777C3F /* SwiftUI.framework */; };
 		B3F1A4582A33548400777C3F /* SceneWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1A4572A33548400777C3F /* SceneWidgetsBundle.swift */; };
@@ -81,6 +83,8 @@
 		B35F872D2A334A8400DD15D6 /* ObjectiveSceneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveSceneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B36FA2852A33A07C0042F9C1 /* SetNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNames.swift; sourceTree = "<group>"; };
 		B36FA28B2A33ABBE0042F9C1 /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
+		B38435252A3400A10067C24F /* ScenePie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePie.swift; sourceTree = "<group>"; };
+		B38435292A3404120067C24F /* PieSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSetView.swift; sourceTree = "<group>"; };
 		B3F1A4502A33548400777C3F /* SceneWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SceneWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F1A4522A33548400777C3F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B3F1A4542A33548400777C3F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -161,6 +165,8 @@
 				B35F87122A334A8400DD15D6 /* Preview Content */,
 				B36FA2852A33A07C0042F9C1 /* SetNames.swift */,
 				B36FA28B2A33ABBE0042F9C1 /* PieView.swift */,
+				B38435252A3400A10067C24F /* ScenePie.swift */,
+				B38435292A3404120067C24F /* PieSetView.swift */,
 			);
 			path = ObjectiveScene;
 			sourceTree = "<group>";
@@ -374,7 +380,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36FA2862A33A07C0042F9C1 /* SetNames.swift in Sources */,
+				B38435262A3400A10067C24F /* ScenePie.swift in Sources */,
 				B35F870F2A334A8300DD15D6 /* ContentView.swift in Sources */,
+				B384352A2A3404120067C24F /* PieSetView.swift in Sources */,
 				B35F87162A334A8400DD15D6 /* Item.swift in Sources */,
 				B35F870D2A334A8300DD15D6 /* ObjectiveSceneApp.swift in Sources */,
 				B36FA28C2A33ABBE0042F9C1 /* PieView.swift in Sources */,

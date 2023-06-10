@@ -9,6 +9,14 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
+
+//struct PieWidgetAttributes : ActivityAttributes {
+//  typealias ContentState = ScenePieSet
+//  
+//  let title : String
+//}
+
+
 struct SceneWidgetsAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
