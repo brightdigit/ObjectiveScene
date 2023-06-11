@@ -21,6 +21,7 @@ struct SceneWidgetsAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
         var emoji: String
+      var value : Double
     }
 
     // Fixed non-changing properties about your activity go here!
@@ -72,15 +73,15 @@ extension SceneWidgetsAttributes {
 
 extension SceneWidgetsAttributes.ContentState {
     fileprivate static var smiley: SceneWidgetsAttributes.ContentState {
-        SceneWidgetsAttributes.ContentState(emoji: "😀")
+      SceneWidgetsAttributes.ContentState(emoji: "😀", value: 0.5)
      }
      
      fileprivate static var starEyes: SceneWidgetsAttributes.ContentState {
-         SceneWidgetsAttributes.ContentState(emoji: "🤩")
+         SceneWidgetsAttributes.ContentState(emoji: "🤩", value: 0.5)
      }
 }
 
-#Preview("Dynamic Island", as: .dynamicIsland(.compact), using: SceneWidgetsAttributes.preview) {
+#Preview("Dynamic Island", as: .dynamicIsland(.expanded), using: SceneWidgetsAttributes.preview) {
    SceneWidgetsLiveActivity()
 } contentStates: {
     SceneWidgetsAttributes.ContentState.smiley
