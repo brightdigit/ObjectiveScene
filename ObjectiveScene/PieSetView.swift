@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PieSetView: View {
   let set : ScenePieSet
-  let width : CGFloat
   
   var content: some View {
     ZStack{
@@ -17,8 +16,7 @@ struct PieSetView: View {
         
         if index < set.pies.count {
           let pie = set.pies[index]
-          PieView(pie: pie, index: index).padding(8.0)
-          
+          PieView(pie: pie, index: index).padding(8.0)          
         }
       }
     }
@@ -30,5 +28,8 @@ struct PieSetView: View {
 }
 
 #Preview {
-  PieSetView(set: .random(0), width: 100)
+  PieSetView(set: .random(0))
+}
+#Preview {
+  PieSetView(set: .random(0)).frame(width: 100)
 }

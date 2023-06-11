@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B359C6C32A35E9E400917CDF /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FA28B2A33ABBE0042F9C1 /* PieView.swift */; };
+		B359C6C42A35E9E400917CDF /* PieSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38435292A3404120067C24F /* PieSetView.swift */; };
+		B359C6C52A35E9E400917CDF /* ScenePie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38435252A3400A10067C24F /* ScenePie.swift */; };
+		B359C6C62A35E9E400917CDF /* SetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FA2852A33A07C0042F9C1 /* SetNames.swift */; };
 		B35F870D2A334A8300DD15D6 /* ObjectiveSceneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F870C2A334A8300DD15D6 /* ObjectiveSceneApp.swift */; };
 		B35F870F2A334A8300DD15D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F870E2A334A8300DD15D6 /* ContentView.swift */; };
 		B35F87112A334A8400DD15D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35F87102A334A8400DD15D6 /* Assets.xcassets */; };
@@ -410,10 +414,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B359C6C42A35E9E400917CDF /* PieSetView.swift in Sources */,
+				B359C6C62A35E9E400917CDF /* SetNames.swift in Sources */,
+				B359C6C52A35E9E400917CDF /* ScenePie.swift in Sources */,
 				B3F1A4582A33548400777C3F /* SceneWidgetsBundle.swift in Sources */,
 				B3F1A45E2A33548400777C3F /* AppIntent.swift in Sources */,
 				B3F1A45C2A33548400777C3F /* SceneWidgets.swift in Sources */,
 				B3F1A45A2A33548400777C3F /* SceneWidgetsLiveActivity.swift in Sources */,
+				B359C6C32A35E9E400917CDF /* PieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

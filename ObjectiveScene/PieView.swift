@@ -39,19 +39,19 @@ struct PieView: View {
     }
   }
   
-    var body: some View {
-      GeometryReader { proxy in
-        
-        self.chart(proxy)
-       
-      }.onAppear(perform: {
-        withAnimation {
-          self.value = pie.value
-        }
-      })
+  var body: some View {
+    GeometryReader { proxy in
       
+      self.chart(proxy)
+      
+    }.onAppear(perform: {
+      withAnimation {
+        self.value = pie.value
+      }
+    })
     
-    }
+    
+  }
 }
 
 #Preview {
